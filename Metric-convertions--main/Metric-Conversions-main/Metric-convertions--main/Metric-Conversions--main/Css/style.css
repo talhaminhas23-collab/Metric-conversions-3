@@ -1,0 +1,726 @@
+  /* =============== GLOBAL & RESET STYLES =============== */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+  }
+
+  main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  /* =============== END GLOBAL & RESET STYLES =============== */
+
+
+  /* =============== HEADER STYLES =============== */
+
+  .top-header {
+      background: #3e7589;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 20px;
+  }
+
+  .header-logo {
+      max-width: 160px;
+  }
+
+  .top-header h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 50px;
+  }
+
+  /* =============== END HEADER STYLES =============== */
+
+  /* =============== NAVBAR STYLES =============== */
+  nav {
+      background-color: #111;
+      padding: 15px 0;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* position: sticky; */
+      /* top: 0; */
+      /* z-index: 100; */
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover {
+      background-color: #3e7589;
+      transform: translateY(-2px);
+  }
+
+  /* =============== END NAVBAR STYLES =============== */
+
+  /* =============== HOME SECTION STYLES =============== */
+
+  #home {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      margin-bottom: 60px;
+  }
+
+  #home h2 {
+      font-size: 36px;
+      color: #3e7589;
+      margin-bottom: 20px;
+  }
+
+  #home p {
+      font-size: 18px;
+      color: #555;
+      max-width: 900px;
+      margin: 0 auto;
+  }
+
+  /* =============== END HOME SECTION STYLES =============== */
+
+  /* =============== COMMON CONVERTER SECTION STYLES (Length, Area, Volume, Mass) =============== */
+
+  #length,
+  #area,
+  #volume,
+  #mass {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 60px;
+  }
+
+  #length h2,
+  #area h2,
+  #volume h2,
+  #mass h2 {
+      background-color: #e6ecef;
+      font-size: 34px;
+      color: #3e7589;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  /* Converter Grid Layout */
+  .converter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+  }
+
+  /* Form Styling */
+  .form-group {
+      margin-bottom: 20px;
+  }
+
+  .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+  }
+
+  .form-group input,
+  .form-group select {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+      outline: none;
+      border-color: #3e7589;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+
+  /* Buttons */
+  .button-group {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
+  }
+
+  .button-group button {
+      padding: 14px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+  }
+
+  .button-group button:first-child {
+      background: #3e7589;
+      color: white;
+  }
+
+  .button-group button:first-child:hover {
+      background: #3e7589;
+      transform: translateY(-2px);
+  }
+
+  .clear-btn {
+      background: #dc3545;
+      color: white;
+  }
+
+  .clear-btn:hover {
+      background: #c82333;
+  }
+
+  /* Result Display */
+  .result {
+      font-size: 28px;
+      font-weight: bold;
+      color: #3e7589;
+      background: #f0f8ff;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      min-height: 80px;
+      border: 2px dashed #3e7589;
+  }
+
+  /* Conversion Table */
+  #lengthTable,
+  #areaTable,
+  #volumeTable,
+  #massTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 16px;
+  }
+
+  #lengthTable th,
+  #areaTable th,
+  #volumeTable th,
+  #massTable th {
+      background: #3e7589;
+      color: white;
+      padding: 15px;
+      text-align: center;
+  }
+
+  #lengthTable td,
+  #areaTable td,
+  #volumeTable td,
+  #massTable td {
+      padding: 12px;
+      border: 1px solid #dee2e6;
+      text-align: center;
+  }
+
+  #lengthTable tr:nth-child(even),
+  #areaTable tr:nth-child(even),
+  #volumeTable tr:nth-child(even),
+  #massTable tr:nth-child(even) {
+      background-color: #f8f9fa;
+  }
+
+  /* =============== END COMMON CONVERTER SECTION STYLES =============== */
+
+  /* =============== TEMPERATURE SECTION STYLES =============== */
+  
+  #temperature {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 60px;
+  }
+
+  #temperature h2 {
+      background-color: #e6ecef;
+      font-size: 34px;
+      color: #3e7589;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  #temperature .converter-grid>div:last-child {
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+  }
+
+  #temperature .converter-grid>div:last-child p {
+      background: #e7f3ff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      border-left: 5px solid #3e7589;
+  }
+
+  /* =============== END TEMPERATURE SECTION STYLES =============== */
+
+  /* =============== CURRENCY SECTION STYLES  =============== */
+
+  .currency-section {
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+      margin: 60px 0;
+  }
+
+  .currency-container {
+
+      margin: 0 auto;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+  }
+
+  .currency-container h2 {
+      font-size: 32px;
+      color: #2d3748;
+      margin-bottom: 10px;
+      font-weight: 700;
+  }
+
+  .subtitle {
+      color: #718096;
+      margin-bottom: 40px;
+      font-size: 17px;
+  }
+
+  .converter-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .input-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+
+  input[type="number"]#amount {
+      padding: 16px;
+      font-size: 24px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      max-width: 100%;
+  }
+
+  input[type="number"]#amount:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+  }
+
+  input[type="number"]#amount::placeholder {
+      color: #a0aec0;
+      font-size: 18px;
+  }
+
+
+  #fromCurrency,
+  #toCurrency {
+      padding: 16px;
+      font-size: 17px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+      height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      cursor: pointer;
+  }
+
+  #fromCurrency:focus,
+  #toCurrency:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+  }
+
+  #history h3 {
+      font-size: 24px;
+      color: #4075b7;
+      margin: 30px 0 15px;
+      border-bottom: 3px solid #3e7589;
+  }
+
+  .swap-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      font-size: 26px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+  }
+
+  .swap-btn:hover {
+      background: #5a6fd8;
+      transform: scale(1.1) rotate(180deg);
+  }
+
+
+  #result {
+      font-size: 26px;
+      font-weight: bold;
+      color: #2d3748;
+      min-height: 70px;
+      padding: 20px;
+      background: #f7fafc;
+      border-radius: 12px;
+      margin-top: 10px;
+      border: 2px dashed #cbd5e0;
+      word-wrap: break-word;
+  }
+
+  .update-note {
+      margin-top: 30px;
+      color: #a0aec0;
+      font-size: 14px;
+  }
+
+  .update-note span {
+      color: #667eea;
+      font-weight: 600;
+  }
+
+  /* Mobile Responsive for Currency */
+  @media (max-width: 768px) {
+      .currency-container {
+          padding: 30px 20px;
+          border-radius: 16px;
+      }
+
+      .currency-container h2 {
+          font-size: 28px;
+      }
+
+      input[type="number"]#amount {
+          font-size: 22px;
+          padding: 14px;
+      }
+
+      #result {
+          font-size: 22px;
+          padding: 18px;
+      }
+
+      .swap-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+      }
+  }
+
+
+  /* =============== END CURRENCY SECTION STYLES =============== */
+
+  /* =============== HISTORY SECTION STYLES =============== */
+  #history {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 60px;
+  }
+
+  #history h2 {
+      font-size: 34px;
+      color: #3e7589;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  #history h3 {
+      font-size: 24px;
+      color: #3e7589;
+      margin: 30px 0 15px;
+      border-bottom :3px solid#3e7589;
+  }
+
+  #history p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 20px;
+      text-align: justify;
+  }
+
+  /* =============== END HISTORY SECTION STYLES =============== */
+
+  /* =============== ARTICLES SECTION STYLES =============== */
+
+  #articles {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 60px;
+  }
+
+  #articles h2 {
+      font-size: 34px;
+      color: #3e7589;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  #articles h3 {
+      font-size: 24px;
+      color: #3e7589;
+      margin: 30px 0 15px;
+      border-bottom: 3px solid #3e7589;
+      padding-bottom: 8px;
+  }
+
+  #articles p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 25px;
+      text-align: justify;
+  }
+
+  /* =============== END ARTICLES SECTION STYLES =============== */
+
+  /* =============== FAQ SECTION STYLES =============== */
+
+  #faqs {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 60px;
+  }
+
+  #faqs h2 {
+      font-size: 34px;
+      color: #3e7589;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  .faq {
+      background: #f8f9fa;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+  }
+
+  .faq h3 {
+      background: #3e7589;
+      color: white;
+      padding: 18px;
+      margin: 0;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  .faq p {
+      padding: 20px;
+      font-size: 17px;
+      color: #444;
+      background: white;
+      margin: 0;
+      border-top: 1px solid #e2e8f0;
+  }
+
+  /* =============== END FAQ SECTION STYLES =============== */
+
+  /* =============== FOOTER STYLES =============== */
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+  }
+
+  .footer {
+      background-color: #3e7589;
+      color: #fff;
+      padding: 50px 20px 30px;
+  }
+
+  .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+  }
+
+  .footer-box {
+      min-width: 250px;
+  }
+
+  .footer-box h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      /* Larger heading */
+      color: #fff;
+  }
+
+  /* Left side - Follow Us (made larger) */
+  .follow-us h3 {
+      font-size: 1.8rem;
+      /* Even bigger for left side */
+  }
+
+  .social-icons {
+      display: flex;
+      gap: 20px;
+      /* More spacing between icons */
+  }
+
+  .social-icons a {
+      color: #ccc;
+      font-size: 28px;
+      /* Larger icons */
+      transition: color 0.3s;
+  }
+
+  .social-icons a:hover.whatsapp {
+      color: #25D366;
+  }
+
+  .social-icons a:hover.facebook {
+      color: #1877F2;
+  }
+
+  .social-icons a:hover.instagram {
+      color: #E1306C;
+  }
+
+  /* Right side - Contact Us */
+  .contact-us p {
+      margin-bottom: 12px;
+      color: #ccc;
+      font-size: 1.1rem;
+  }
+
+  .contact-us i {
+      margin-right: 10px;
+      color: #ccc;
+  }
+
+  /* Copyright - centered at bottom */
+  .copyright {
+      text-align: center;
+      margin-top: 0px;
+      padding-top: 10px;
+      border-top: 5px solid #3e7589;
+      color: white;
+      font-size: 0.95rem;
+      width: 100%;
+      background: #333;
+  }
+
+  /* Responsive adjustment */
+  @media (max-width: 768px) {
+      .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+
+      .footer-box {
+          margin-bottom: 30px;
+      }
+  }
+
+  /* =============== END FOOTER STYLES =============== */
+
+  /* =============== RESPONSIVE DESIGN =============== */
+
+  @media (max-width: 992px) {
+      .converter-grid {
+          grid-template-columns: 1fr;
+      }
+
+      nav ul {
+          flex-direction: column;
+          align-items: center;
+      }
+  }
+
+  @media (max-width: 768px) {
+      header h1 {
+          font-size: 36px;
+      }
+
+      #home h2,
+      #length h2,
+      #area h2,
+      #volume h2,
+      #mass h2,
+      #temperature h2 {
+          font-size: 28px;
+      }
+
+      .currency-container {
+          padding: 30px 20px;
+      }
+
+      input[type="number"],
+      #result {
+          font-size: 26px;
+      }
+  }
+
+  /* =============== END RESPONSIVE DESIGN =============== */
+    
+    .convert-style-btn {
+        display: inline-block;
+        padding: 2px 10px;
+        background-color: #3e7589;
+        color: white;
+        text-decoration: none;
+        border-radius: 7px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    
